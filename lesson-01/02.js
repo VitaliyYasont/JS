@@ -7,11 +7,10 @@
 
 // your code
 let factorial = 1;
-let i = 1;
+let number = 1;
 
-while (i <= 10) { 
-    factorial = factorial * i;
-    i = i + 1;
+while (number <= 10) { 
+    factorial = factorial * number;
+    number = number + 1;
     console.log(factorial); 
 }
-alert(factorial);

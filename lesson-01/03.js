@@ -16,5 +16,4 @@ while (number <= 20) {
   console.log(sum);
 }
 
-alert(sum);
 

@@ -10,4 +10,3 @@ while (number < 20) {
     sum = sum + number;
     console.log(sum);
 }
-alert(sum);
