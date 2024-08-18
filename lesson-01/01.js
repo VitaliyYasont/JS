@@ -5,7 +5,7 @@
 let sum = 0;
 let number = 0;
 
-while (number <= 19) { 
+while (number < 20) { 
     number = number + 1;
     sum = sum + number;
     console.log(sum);
