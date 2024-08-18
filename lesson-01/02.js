@@ -13,6 +13,5 @@ while (i <= 9) {
     i = i + 1;
     factorial = factorial * i;
     console.log(factorial);
-    
+    alert(factorial);
 }
-alert(factorial);

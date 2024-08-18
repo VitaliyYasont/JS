@@ -14,7 +14,7 @@ while (number <= 20) {
   }
   number = number + 1;
   console.log(sum);
-  
+  alert(sum);
 }
-alert(sum);
+
 
