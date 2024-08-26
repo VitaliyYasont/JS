@@ -10,7 +10,8 @@ let number = 1;
 
 while (number <= 20) { 
   if (number % 2 != 0) {
-    sum = sum + number;number = number + 1;
+    sum = sum + number;
+    number = number + 1;
   }
   number = number + 1;
   console.log(sum);
