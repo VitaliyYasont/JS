@@ -18,6 +18,15 @@ findCommonElements([1, 2, 3], [2, 3, 4]) // [2, 3]
 счёт hoisting.
 */
 
+function includesElement(array, element) {
+    for (let i = 0; i < array.length; i++) {
+      if (array[i] === element) {
+        return true;
+      }
+    }
+    return false;
+  }
+
 function findCommonElements(array1, array2) {
     let commonArray = [];
     for (let i = 0; i < array1.length; i++) {
