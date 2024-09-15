@@ -15,12 +15,12 @@ const game = {
     gold: 250,
     lumber: 100,
   },
-}
-  function addResource(resource, amount) { // создаем функцию, с 2 значениями  ресы и количество
-    if (!game.resources[resource]) { // если ресурса  нет то получаем сообщение об этом
+
+  addResource(resource, amount) { // создаем функцию, с 2 значениями  ресы и количество
+    if (game.resources[resource] === undefined) { // если ресурса  нет то получаем сообщение об этом
       console.log("Invalid resource");
     } else  {
       game.resources[resource] += amount; // если ресурс есть   то прибавляем к нему заданое число
     }
   }
-
+}
