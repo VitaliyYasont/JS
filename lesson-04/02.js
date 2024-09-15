@@ -16,13 +16,41 @@
 её не нужно, она доступна по всему проекту за счёт hoisting.
 */
 
-function findUniqueElements(array) {
-    let newArray = [];
+// function findUniqueElements(array) {
+//     let newArray = [];
+//     for (let i = 0; i < array.length; i++) {
+//         if (includesElement(newArray, array[i] === false)) {
+//             newArray.push(array[i]);
+//           }
+//         }
+//     return newArray;
+
+// console.log(findUniqueElements([1, 2, 3, 2, 1, 4]))
+// function findUniqueElements(array) {
+//     const uniqueArray = [];
+//     for (let i = 0; i < array.length; i++) {
+//       if (!uniqueArray.includes(array[i])) {
+//         uniqueArray.push(array[i]);
+//       }
+//     }
+//     return uniqueArray;
+//   }
+
+  function findUniqueElements(array) {
+    const uniqueArray = [];
     for (let i = 0; i < array.length; i++) {
-        if (includesElement(newArray, array[i]) === false) {
-            newArray.push(array[i]);
-          }
+      let isUnique = true;
+      for (let j = 0; j < uniqueArray.length; j++) {
+        if (array[i] === uniqueArray[j]) {
+          isUnique = false;
+          break;
         }
-    return newArray;
-}
-console.log(findUniqueElements([1, 2, 3, 2, 1, 4]))
+      }
+      if (isUnique) {
+        uniqueArray.push(array[i]);
+      }
+    }
+    return uniqueArray;
+  }
+
+  console.log(findUniqueElements([1, 2, 3, 2, 1, 4]))
