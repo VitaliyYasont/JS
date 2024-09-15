@@ -35,11 +35,11 @@ const gallery = {
   'The Scream': 'Edvard Munch',
 }
 
-function updateGallery(gallery, name, newZnach) {
-  if (gallery[name]) {
-    gallery[name] = newZnach;
-  } else{
-    gallery[name] = newZnach
+function updateGallery(gallery, name, newZnach) { //создаем метод с 3 значениями
+  if (gallery[name]) { // в случае если такое имя уже есть в нашем объекте 
+    gallery[name] = newZnach; // мы перезаписываем его с новым значение( какой либо правкой)
+    } else{ 
+    gallery[name] = newZnach // в случае если его нет мы просто добавляем его в наш объект
   }
 }
 
