@@ -20,7 +20,7 @@ const game = {
     if (game.resources[resource] === undefined) { // если ресурса нет то получаем сообщение об этом
       console.log("Invalid resource");
     } else  {
-      game.resource[resource] += amount; // если ресурс есть то прибавляем к нему заданое число
+      game.resources[resource] += amount; // если ресурс есть то прибавляем к нему заданое число
     }
   }
 
