@@ -7,11 +7,16 @@
 */
 
 function capitalizeWords(str) {
-  const words = str.split(' '); // разбиваем строку на массив слов
-  for (let i = 0; i < words.length; i++) {
-    words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1); // делаем первую букву каждого слова заглавной
+  let result = '';
+  let wordStart = 0;
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === ' ') {
+      result += str.substring(wordStart, i).charAt(0).toUpperCase() + str.substring(wordStart + 1, i).toLowerCase() + ' ';
+      wordStart = i + 1;
+    }
   }
-  return words.join(' '); // соединяем слова обратно в строку
+  result += str.substring(wordStart).charAt(0).toUpperCase() + str.substring(wordStart + 1).toLowerCase();
+  return result;
 }
 
 
