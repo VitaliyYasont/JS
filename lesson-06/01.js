@@ -39,3 +39,4 @@ document.getElementById('prev-button').addEventListener('click', prevImage);
 
 showImage();
 
+alert('fuck')
