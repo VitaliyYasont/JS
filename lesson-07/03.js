@@ -11,7 +11,8 @@
 
 function truncate(str, maxLength) {
   if (str.length > maxLength) {
-    return str.substring(0, maxLength - 3) + '...';
+    let truncate = maxLength - 3; // account for the ellipsis
+    return str.substring(0, truncate) + '...';
   }
   return str;
 }
