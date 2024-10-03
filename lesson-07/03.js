@@ -12,12 +12,12 @@
 
 
 function truncate(str, maxLength) {
-  if (str.length > maxLength) {
-    let truncatedLength = maxLength - 3;
-    if (truncatedLength < 0) {
-      truncatedLength = 0;
+  if (str.length > maxLength) { // если длина строки больше то мы
+    let pzdc = maxLength - 3; // задаю новую длину строки без учета троеточия
+    if (pzdc < 0) {  // если получилось меньше 0 правниваю к 0 не имеея отриц значения
+      pzdc = 0;
     }
-    return str.substring(0, truncatedLength) + '...';
+    return str.substring(0, pzdc) + '...'; // ебашу строку с 0 до пиздеца дабы поместилось троеточие 
   }
   return str;
 }

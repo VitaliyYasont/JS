@@ -7,12 +7,7 @@ function isNumeric(str) {
     return !isNaN(parseFloat(str)) && isFinite(str);
 }
 
-
-
 // const isNumeric = str => !isNaN(parseFloat(str)) && isFinite(str);
-
-
-
 
 // console.log(isNumeric("123")) // Ожидаемый результат: true
 // console.log(isNumeric("12.3")) // Ожидаемый результат: true
