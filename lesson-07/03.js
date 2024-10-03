@@ -12,6 +12,9 @@
 function truncate(str, maxLength) {
   if (str.length > maxLength) {
     let truncatedLength = maxLength - 3;
+    if (truncatedLength < 0) {
+      truncatedLength = 0;
+    }
     return str.substring(0, truncatedLength) + '...';
   }
   return str;
