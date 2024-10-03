@@ -9,6 +9,8 @@
 * truncate("Короткая строка", 20) // Ожидаемый результат: "Короткая строка"
 */
 
+
+
 function truncate(str, maxLength) {
   if (str.length > maxLength) {
     let truncatedLength = maxLength - 3;
