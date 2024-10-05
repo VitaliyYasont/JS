@@ -9,13 +9,16 @@
 * truncate("Короткая строка", 20) // Ожидаемый результат: "Короткая строка"
 */
 
+
+
 function truncate(str, maxLength) {
-  if (str.length > maxLength) { 
-    let pzdc = maxLength - 3; 
-    if (pzdc < 0) {  
-      pzdc = 0;
-    }
-    return str.substring(0, pzdc) + '...'; 
+  
+  if (str.length > maxLength) {
+
+    let pzdc = str.substring(0, maxLength - 3);
+   
+    return pzdc + '...';
   }
-  return str;  
+  
+  return str;
 }
