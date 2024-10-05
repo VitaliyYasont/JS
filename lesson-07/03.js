@@ -16,7 +16,7 @@ function truncate(str, maxLength) {
     let pzdc = maxLength - 3; // задаю новую длину строки без учета троеточия
     if (pzdc < 0) {  // если получилось меньше 0 правниваю к 0 не имеея отриц значения
       pzdc = 0;
-      return str;
+      return str.substring(0, pzdc) + '...'
     }
     return str.substring(0, pzdc) + '...'; // ебашу строку с 0 до пиздеца дабы поместилось троеточие 
   }
