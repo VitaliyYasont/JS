@@ -9,18 +9,13 @@
 * truncate("Короткая строка", 20) // Ожидаемый результат: "Короткая строка"
 */
 
-
-
 function truncate(str, maxLength) {
-  if (str.length > maxLength) { // если длина строки больше то мы
-    let pzdc = maxLength - 3; // задаю новую длину строки без учета троеточия
-    if (pzdc < 0) {  // если получилось меньше 0 правниваю к 0 не имеея отриц значения
+  if (str.length > maxLength) { 
+    let pzdc = maxLength - 3; 
+    if (pzdc < 0) {  
       pzdc = 0;
-      return str.substring(0, pzdc) + '...'
     }
-    return str.substring(0, pzdc) + '...'; // ебашу строку с 0 до пиздеца дабы поместилось троеточие 
+    return str.substring(0, pzdc) + '...'; 
   }
-  if (str.length >= maxLength) {
-    return str;  // возвращаю строку без изменений если она короче 
-  }
+  return str;  
 }
