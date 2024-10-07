@@ -45,11 +45,13 @@ function startCount(){
 }
 
 startButton.addEventListener('click', () => {
-  if (!isTimerStarted) {
-    countdownDisplay.textContent = '3';
-    isTimerStarted = true;
-    startCount();
-}
+  if (isTimerStarted) {
+    clearInterval(timerId);
+    isTimerStarted = false;
+  }
+  countdownDisplay.textContent = '3';
+  isTimerStarted = true;
+  startCount();
 })
 
 cancelButton.addEventListener('click', () => {
