@@ -33,38 +33,34 @@ let isTimerStarted = false;
 let timerId;
 let counter = 3;
 
-
 startButton.addEventListener('click', () => {
-  if(isTimerStarted) return;
+  if (isTimerStarted) return;
 
-  isTimerStarted = true
+  isTimerStarted = true;
 
+  countdownDisplay.textContent = counter;
 
-  countdownDisplay.textContent = counter 
-
-  
-timerId = setInterval(()=> {
-  counter--
-  if(counter > 0) {
-    countdownDisplay.textContent = counter
-  } else {
-    countdownDisplay.textContent = "🚀"
-    clearInterval(timerId)
-    isTimerStarted = false
-  }
-}, 1000)
-})
+  timerId = setInterval(() => {
+    counter--;
+    if (counter > 0) {
+      countdownDisplay.textContent = counter;
+    } else {
+      countdownDisplay.textContent = "🚀";
+      clearInterval(timerId);
+      isTimerStarted = false;
+    }
+  }, 1000);
+});
 
 
 cancelButton.addEventListener('click', () => {
-  if (!isTimerStarted) {
+  if (timerId) {
     clearInterval(timerId);
     countdownDisplay.textContent = 'Отменено';
     isTimerStarted = false;
-  } else {
-    countdownDisplay.textContent = 'Отменено';
+    // что за нахуй блять сука бесит
   }
-})
+});
 
 
 
