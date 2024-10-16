@@ -24,4 +24,12 @@ const doubledNumbers = map(numbers, (element, index) => {
 console.log(doubledNumbers) // Должен вывести: [2, 4, 6, 8, 10]
 */
 
-const map = () => {}
+const map = (array, callback) => {
+  
+  if (!Array.isArray(array)) {
+ throw new Error('The first argument must be an array'); }
+  for (let i = 0; i < array.length; i++) { 
+    result[i] = callback(array[i], i);  }
+ 
+  return result;
+}
