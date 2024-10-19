@@ -29,7 +29,13 @@ const model = {
     this.movies.push(newMovie)
     view.renderMovies(this.movies)
   },
-  // your code
+
+
+  deleteMovie(moviesId) {
+    this.movies = this.movies.filter((movie) => movie.id !== moviesId)
+
+    view.renderMovies(model.movies)
+  }
 }
 
 const view = {
@@ -50,7 +56,17 @@ const view = {
       inputDescription.value = ''
     })
 
-    // your code
+
+
+    if (e.target.classList.contains('submit')) {
+      const movieId = +e.target.parentElement.id
+      // 2. вызываем метод контроллера для удаления задачи
+      controller.deleteMovie(movieId)
+    }
+
+
+
+
   },
   renderMovies(movies) {
     const list = document.querySelector('.list')
@@ -90,7 +106,12 @@ const controller = {
       view.displayMessage('Заполните все поля!', true)
     }
   },
-  // your code
+
+
+    deleteTask(moviesId) {
+      model.deleteTask(moviesId)
+    },
+  
 }
 
 function init() {
